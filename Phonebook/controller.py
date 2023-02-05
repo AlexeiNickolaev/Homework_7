@@ -1,0 +1,12 @@
+import view
+import process
+
+def button_click():
+    rezhim = view.inp_mod()
+    if rezhim.lower() == 'импорт':
+        sern = view.inp_import()
+        res_search = process.search(sern)
+        if isinstance(res_search, str):
+            view.view_import_no()
+        else:
+            view.view_import(res_search)    
