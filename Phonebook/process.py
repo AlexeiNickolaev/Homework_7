@@ -1,7 +1,7 @@
 def search(sn):
     res_list = []
     path = 'Phonebook\data.txt'
-    with open(path, 'r', encoding = 'utf-8') as file:
+    with open (path, 'r', encoding='utf-8') as file:
         while True:
             my_book = file.readline()
             if not my_book:
@@ -15,3 +15,12 @@ def search(sn):
     if len(res_list) > 0:
         return res_list
     return 'Таких людей нет'
+
+
+def export (res):
+    path = 'Phonebook\data.txt'
+    with open(path, 'a', encoding='utf-8') as file:
+        # file.write('\n')
+        for ind in range(5):
+            file.write(res[ind] + '\n')
+        file.write(res[5])    
