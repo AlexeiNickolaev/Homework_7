@@ -9,10 +9,10 @@ def button_click():
         res_search = process.search(sern)
         if isinstance(res_search, str):
             view.view_import_no()
-            log.log_imp('1')
         else:
             view.view_import(res_search)
+        log.log_imp(sern)
     elif rezhim.lower() == '2':
         result = view.inp_export()
         process.export(result)
-        log.log_exp('2')
+        log.log_exp(result)

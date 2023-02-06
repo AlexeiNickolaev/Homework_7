@@ -1,10 +1,10 @@
 import datetime
 
-def log_imp(surname):
+def log_imp(sern):
     with open('log.txt', 'a', encoding='utf-8') as file:
-        file.write(f'Запрос по фамилии {surname} осуществлен в {datetime.datetime.now()} \n')
+        file.write(f'Запрос по фамилии {sern} осуществлен в {datetime.datetime.now()} \n')
 
 
-def log_exp(surname, name, sec_name, phone, comment):
+def log_exp(result):
     with open('log.txt', 'a', encoding='utf-8') as file:
-        file.write(f'Данные {surname, name, sec_name, phone, comment} были записаны в {datetime.datetime.now()} \n')
+        file.write(f'Данные {result} были записаны в {datetime.datetime.now()} \n')
